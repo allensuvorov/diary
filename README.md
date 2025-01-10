@@ -1,4 +1,10 @@
 # diary
+
+Project Description
+- minimalistic functionality: auth, crud
+- minimalistic interface: all static, no animations
+- simple design akin to "advent of code"
+
 Daily diary
 
 - increment1: have the server return "welcome to your diary"
