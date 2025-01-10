@@ -2,7 +2,7 @@
 
 Project Description
 - minimalistic functionality: auth, crud
-- minimalistic interface: all static, no animations
+- minimalistic interface: no animations
 - simple design akin to "advent of code"
 
 Daily diary
