@@ -12,13 +12,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-type user struct {
-	ID       int
-	Email    string
-	Password string
-	Username string
-}
-
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Handler - hello\n")
 	now := time.Now()
@@ -27,7 +20,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
 	http.HandleFunc("/", handler)
 	fmt.Println("Server started on :8080")
 	http.ListenAndServe(":8080", nil)

@@ -2,10 +2,7 @@ module github.com/allensuvorov/diary
 
 go 1.22.4
 
-require (
-	go.mongodb.org/mongo-driver v1.17.2
-	go.mongodb.org/mongo-driver/v2 v2.0.0
-)
+require go.mongodb.org/mongo-driver v1.17.2
 
 require (
 	github.com/golang/snappy v0.0.4 // indirect
