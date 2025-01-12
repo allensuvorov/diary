@@ -1,9 +1,14 @@
 # diary
 
 Project Description
+- a simple journaling app
+- stack: HTMX, Go, MongoDB
 - minimalistic functionality: auth, crud
 - minimalistic interface: no animations
 - simple design akin to "advent of code"
+
+Milestones:
+- As a first milestone: I want auth and crud with HTMX on the front end with minimalistic interface.
 
 Daily diary
 
