@@ -12,6 +12,13 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+type user struct {
+	ID       int
+	Email    string
+	Password string
+	Username string
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Handler - hello\n")
 	now := time.Now()
