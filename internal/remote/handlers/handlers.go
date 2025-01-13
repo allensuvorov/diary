@@ -22,6 +22,9 @@ func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 }
 
 func (nh NoteHandler) GetNote(w http.ResponseWriter, r *http.Request) {
+	log.Print("GetNote Handler - start\n")
+	fmt.Fprintf(w, "Here is your note!\n")
+	log.Print("GetNote Handler - end\n")
 }
 
 func (nh NoteHandler) CreateNote(w http.ResponseWriter, r *http.Request) {
