@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/allensuvorov/diary/internal/remote/handlers"
@@ -12,5 +13,5 @@ func main() {
 	noteHandler := handlers.NewNoteHandler()
 	r := routers.NewRouter(noteHandler)
 	fmt.Println("Server started on :8080")
-	http.ListenAndServe(":8080", r)
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
