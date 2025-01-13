@@ -15,7 +15,7 @@ Increments:
 - increment2: have the server also return current date and time from server location
 - increment3: docker
 - increment4: mongodb
-- increment5: auth
+- increment5: basic.endpoints
 
 
 TODO:
