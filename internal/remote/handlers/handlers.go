@@ -21,14 +21,17 @@ func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 	log.Print("Welcome Handler - end\n")
 }
 
+func (nh NoteHandler) CreateNote(w http.ResponseWriter, r *http.Request) {
+	log.Print("CreateNote Handler - start\n")
+	// data - JSON with field: text
+
+	// validation: check note is not empty
+	fmt.Fprintf(w, "Thank you for your note!\n")
+	log.Print("CreateNote Handler - end\n")
+}
+
 func (nh NoteHandler) GetNote(w http.ResponseWriter, r *http.Request) {
 	log.Print("GetNote Handler - start\n")
 	fmt.Fprintf(w, "Here is your note!\n")
 	log.Print("GetNote Handler - end\n")
-}
-
-func (nh NoteHandler) CreateNote(w http.ResponseWriter, r *http.Request) {
-	log.Print("CreateNote Handler - start\n")
-	fmt.Fprintf(w, "Thank you for your note!\n")
-	log.Print("CreateNote Handler - end\n")
 }
