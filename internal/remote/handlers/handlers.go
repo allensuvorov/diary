@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"time"
@@ -23,8 +24,15 @@ func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 
 func (nh NoteHandler) CreateNote(w http.ResponseWriter, r *http.Request) {
 	log.Print("CreateNote Handler - start\n")
-	// data - JSON with field: text
 
+	// plain text
+	b, err := io.ReadAll(r.Body)
+	if err != nil {
+		log.Printf("Error: %v", err)
+	}
+	log.Printf("CreateNote Handler - r.Body %s", b)
+
+	// data - JSON with field: text
 	// validation: check note is not empty
 	fmt.Fprintf(w, "Thank you for your note!\n")
 	log.Print("CreateNote Handler - end\n")
