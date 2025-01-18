@@ -8,7 +8,7 @@ import (
 func NewRouter(note handlers.NoteHandler) chi.Router {
 	r := chi.NewRouter()
 	r.Get("/", note.Welcome)
-	r.Get("/notes/{id}", note.GetNote)
+	r.Get("/notes/{noteId}", note.GetNote) // Display a specific note
 	r.Post("/notes", note.CreateNote)
 	return r
 }
