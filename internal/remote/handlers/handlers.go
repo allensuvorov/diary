@@ -24,6 +24,19 @@ func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 
 func (nh NoteHandler) ShowNewNoteForm(w http.ResponseWriter, r *http.Request) {
 	log.Print("ShowNewNoteForm - start\n")
+	// 1. Check if the request method is GET
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// 2. Render the HTML form for creating a new note
+	//   - You can use a template engine like `html/template`
+	//     to render the form with any necessary data.
+	// err := templates.ExecuteTemplate(w, "new_note.html", nil)
+	// if err != nil {
+	// 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+	// }
 	log.Print("ShowNewNoteForm - end\n")
 }
 
