@@ -22,6 +22,11 @@ func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 	log.Print("Welcome Handler - end\n")
 }
 
+func (nh NoteHandler) ShowNewNoteForm(w http.ResponseWriter, r *http.Request) {
+	log.Print("ShowNewNoteForm - start\n")
+	log.Print("ShowNewNoteForm - end\n")
+}
+
 func (nh NoteHandler) CreateNote(w http.ResponseWriter, r *http.Request) {
 	log.Print("CreateNote Handler - start\n")
 
