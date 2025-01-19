@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"fmt"
+	"html/template"
 	"io"
 	"log"
 	"net/http"
@@ -17,8 +18,11 @@ func NewNoteHandler() NoteHandler {
 
 func (nh NoteHandler) Welcome(w http.ResponseWriter, r *http.Request) {
 	log.Print("Welcome Handler - start\n")
+	tmpl := template.Must(template.ParseFiles("../../internal/remote/views/index.html"))
+	tmpl.Execute(w, nil)
 	now := time.Now()
 	fmt.Fprintf(w, "Welcome to your daily diary!\nCurrent date and time: %s\n", now.Format(time.Layout))
+
 	log.Print("Welcome Handler - end\n")
 }
 
