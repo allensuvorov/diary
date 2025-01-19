@@ -29,7 +29,7 @@ func (nh NoteHandler) ShowNewNoteForm(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
 		return
 	}
-
+	io.WriteString(w, "new note form is coming here")
 	// 2. Render the HTML form for creating a new note
 	//   - You can use a template engine like `html/template`
 	//     to render the form with any necessary data.
