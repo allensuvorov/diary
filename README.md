@@ -20,6 +20,7 @@ Increments:
 
 TODO:
 - welcome page with hmtx
+- Cross-site request forgery
 - docker context
 - http vs https, https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
 - https://emizentech.com/blog/diary-journal-app-development.html
