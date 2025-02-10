@@ -24,3 +24,4 @@ TODO:
 - docker context
 - http vs https, https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
 - https://emizentech.com/blog/diary-journal-app-development.html
+- https://dev.to/mihailtd/secure-self-hosting-with-cloudflare-tunnels-and-docker-zero-trust-security-5bbn
