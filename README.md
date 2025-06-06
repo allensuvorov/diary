@@ -1,6 +1,7 @@
 # diary
 
 Project Description
+- AI agent to work with records
 - a simple journaling app
 - stack: HTMX, Go, MongoDB
 - minimalistic functionality: auth, crud
